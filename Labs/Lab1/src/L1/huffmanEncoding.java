@@ -1,4 +1,5 @@
 package L1;
+
 import java.util.Scanner;
 
 
@@ -20,7 +21,7 @@ public class huffmanEncoding {
             {
                 if((int)sentence.charAt(i) == j)//finds the ASCII value
                 {
-                    ASCIIarray[j]++;//increments the ASCII Value Counter
+                    ASCIIarray[j]++;//increments the ASCII Value Counter, which becomes the frequency of thr word in the end result
                 }
             }
 
@@ -52,6 +53,7 @@ public class huffmanEncoding {
                 }
             }
         }
+
 
 
 
