@@ -4,7 +4,7 @@ import java.io.*;
 
 /**
  * Created by Sean on 13/02/2017.
- * This is the solution to
+ * This is the solution to the CS211 Lab2
  */
 public class huffmanCompression {
     public static void main(String[] args){
@@ -15,15 +15,18 @@ public class huffmanCompression {
             String binaryString="";      //this stores the string of binary code
 
 
-            for(int i=0; i < sentence.length(); i++){        //go through the sentence
+            for(int i=0; i < sentence.length(); i++)//goes through the sentence
+            {       
                 int decimalValue = (int)sentence.charAt(i);      //convert to decimal
                 String binaryValue = Integer.toBinaryString(decimalValue);      //convert to binary
-                for(int j=7;j>binaryValue.length();j--){
+               /* for(int j=7;j>binaryValue.length();j--)
+                {
                     binaryString+="0";           //this loop adds in those pesky leading zeroes
                 }
                 binaryString += binaryValue+" "; //add to the string of binary
-            }
-            System.out.println(binaryString);    //print out the binary
+            }*/
+           //,; n'#
+               System.out.println(binaryString);    //prints out the binary result
 
 
             int[] array = new int[256];      //an array to store all the frequencies
@@ -39,7 +42,7 @@ public class huffmanCompression {
 
             for(int i=0; i<array.length; i++){ //go through frequency array
                 if(array[i]>0){ //print out non-zero frequencies - cast to a char
-                    System.out.println("'"+(char)i+"' appeared "+array[i]+((array[i] == 1) ? " time" : " times"));
+                   // System.out.println("'"+(char)i+"' appeared "+array[i]+((array[i] == 1) ? " time" : " times"));
                     Tree myTree = new Tree();    //create a new Tree
                     myTree.frequency = array[i]; //set the cumulative frequency of that Tree
                     myTree.root=new Node();      //insert the letter as the root node
@@ -69,7 +72,7 @@ public class huffmanCompression {
                 totalLength+=theCode.length();  //track the length of the solution
             }
             //print out all the info
-            System.out.println("\nCompressed size is "+totalLength+" bits / "+sentence.length()*7+" bits = "+(int)((totalLength*100)/(sentence.length()*7))+" %\n");
+           // System.out.println("\nCompressed size is "+totalLength+" bits / "+sentence.length()*7+" bits = "+(int)((totalLength*100)/(sentence.length()*7))+" %\n");
         }  //keeps the whole thing looping forever
 
 }

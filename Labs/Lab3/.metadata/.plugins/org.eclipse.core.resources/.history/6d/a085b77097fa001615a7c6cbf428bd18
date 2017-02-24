@@ -1,0 +1,11 @@
+package labThree;
+
+public class question {
+	public static void main(String[] args)
+	{
+		String input1 = "Hello";
+		new sortGreatest(input1);
+		System.out.println(input1.highest);
+		
+	}
+}
