@@ -4,7 +4,11 @@ import java.io.*;
 
 /**
  * Created by Sean on 13/02/2017.
+<<<<<<< HEAD
  * This is the solution to the CS211 Lab2
+=======
+ * This is the solution to CS211 Lab 2 from Phil Maguire
+>>>>>>> f9f5ce2e70c55effd40cd67f4cfce71fb36081de
  */
 public class huffmanCompression {
     public static void main(String[] args){
