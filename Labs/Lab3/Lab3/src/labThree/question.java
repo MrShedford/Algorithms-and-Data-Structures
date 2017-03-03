@@ -11,10 +11,10 @@ public class question {
 		int n = sc.nextInt();//number of inputs into the system
 		String[] wordsToSort = new String [n];
 		
-		while(sc.hasNext())
-		{
+		
 			
-		}
+		
+		
 		
 		
 		

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="binaryTrees/src"/>
+	<classpathentry kind="src" path="Lab4_Scrabble/src"/>
+	<classpathentry kind="src" path="Labs/Lab1/src"/>
+	<classpathentry kind="src" path="Labs/Lab2/src"/>
+	<classpathentry excluding="labThree/" kind="src" path="Labs/Lab3/Lab3/src"/>
+	<classpathentry kind="src" path="Labs/Lab3/Lab3/src/labThree"/>
+	<classpathentry kind="src" path="quickSort/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="Lab4_Scrabble/bin"/>
+</classpath>

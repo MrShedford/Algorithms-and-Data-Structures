@@ -1,0 +1,54 @@
+private static void quickSort(String[] a, int start, int end)
+{
+	sortGreatest 
+        // index for the "left-to-right scan"
+        int i = start;
+        // index for the "right-to-left scan"
+        int j = end;
+        
+
+        // only examine arrays of 2 or more elements.
+        if (j - i >= 1)
+        {
+            // The pivot point of the sort method is arbitrarily set to the first element int the array.
+            String pivot = a[i];
+            
+            sortGreatest comp1 = new sortGreatest(a[i]);
+            sortGreatest comp2 = new sortGreatest(pivot);
+            sortGreatest comp3 = new sortGreatest(a[j]);
+            
+            // only scan between the two indexes, until they meet.
+            while (j > i)
+            {
+                // from the left, if the current element is lexicographically less than the (original)
+                // first element in the String array, move on. Stop advancing the counter when we reach
+                // the right or an element that is lexicographically greater than the pivot String.
+                while ((comp1.highest > comp2.highest) && i <= end && j > i){
+                    i++;
+                }
+                // from the right, if the current element is lexicographically greater than the (original)
+                // first element in the String array, move on. Stop advancing the counter when we reach
+                // the left or an element that is lexicographically less than the pivot String.
+                while ((comp3.highest > comp2.highest) && j >= start && j >= i){
+                    j--;
+                }
+                // check the two elements in the center, the last comparison before the scans cross.
+                if (j > i)
+                    swap(a, i, j);
+            }
+
+            // Swap the pivot point with the last element of the left partition.
+            swap(a, start, j);
+            // sort left partition
+            quickSort(a, start, j - 1);
+            // sort right partition
+            quickSort(a, j + 1, end);
+        }
+    }
+   
+    private static void swap(String[] a, int i, int j)
+    {
+    String temp = a[i];
+    a[i] = a[j];
+    a[j] = temp;
+    }

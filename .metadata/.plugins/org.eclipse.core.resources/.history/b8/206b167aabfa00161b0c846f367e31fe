@@ -1,0 +1,91 @@
+import java.util.*;
+
+public class Solution{
+    
+    public static String[] myarray;
+
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        String[] array = new String[num];
+        
+        for(int i=0;i<num;i++)
+        {
+            array[i] = sc.hasNextLine();     
+        }
+        
+        recQuickSort(0,array.length-1,array);
+        for(int j= array.length-1;j++){
+            System.out.println(array[j]);
+        }
+       
+	}
+    public static void recQuickSort(int left, int right, String[] theArray)
+        {
+        if(right-left<=0)
+            {
+            return;
+        }
+        else
+            {
+            String pivot = theArray[right];
+            int partition = partitionIt(left, right, pivot,theArray);
+            recQuickSort(left,partition-1,theArray);
+            recQuickSort(partition+1, right, theArray);
+        }
+    }
+    
+    public static int partitionIt(int left, int right, String pivot, String[] theArray)
+        {
+        int leftPtr = left-1;
+        int rightPtr = right;
+        while(true)
+            {
+            while(check(theArray[++leftPtr],pivot)==true);//no operation
+            while(rightPtr >0 && (check(theArray[--rightPtr], pivot) ==false));
+            
+            if(leftPtr >= rightPtr)
+                break;
+            else{
+                swap(leftPtr,rightPtr,theArray);
+            }
+        }
+        swap(leftPtr, right, theArray);
+        return leftPtr
+    }
+    public static void swap(){
+        String temp = "";
+        leftPtr = temp;
+        right = temp;
+    }
+    public static boolean check(String one, String two)
+        {
+        int bigone =0;
+        int bigtwo=0;
+        
+        for(int i =0; i<one.length();i++)
+            {
+            if((int)one.charAt(i) > bigone)
+			{
+				bigone = (int)one.charAt(i);
+			}
+            
+        }
+        for(int j=0;j<two.length();j++)
+            {
+            if((int)two.charAt(j);j++)
+                {
+                bigtwo = (int)two.charAt(i);
+            }
+        }
+        if(bigone>bigtwo)
+            return true;
+        else if (bigone<bigtwo)
+            return false;
+            
+        if(one.compareTo(two) > 0)
+            return true;
+        else 
+            return false;
+    }
+}
