@@ -2,6 +2,8 @@ package phil;
 
 import java.util.*;
 
+import lab5.FileIO;
+
 public class Scrabble{
     public static void main(String args[]){
     	 FileIO reader = new FileIO();
@@ -14,7 +16,7 @@ public class Scrabble{
          
          
          
-         String[] inputs = reader.load("X:/2nd/CS211/Lab4_Scrabble/src/phil/dictionary.txt");    //Reading the File as a String array
+         String[] inputs = reader.load("X:/2nd/CS211/Encryption/srcc/lab5/encryoted.txt");    //Reading the File as a String array
          int[] inputValues = new int[inputs.length];//this array will store the points of every work in the dictionary
          String[] longestWords = new String[100000];
          
