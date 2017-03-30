@@ -11,8 +11,8 @@ public class languages {
          String[] swedish = reader.load("X:/2nd/CS211/Encryption/src/lab5/swedish_monograms.txt");
          
          double[] eng = English(english);
-         double[] dtc = finnish(finnish);
-         double[] swd = Swedish(swedish);
+         //double[] dtc = finnish(finnish);
+         //double[] swd = Swedish(swedish);
        
 	}  
 	
@@ -40,7 +40,7 @@ public class languages {
 		Arrays.sort(englishFreq);
 		return englishFreq;
 }
-	public static double[] finnish (String[] inputs)//can be used for all the monograms with slight adjustments
+	/*public static double[] finnish (String[] inputs)//can be used for all the monograms with slight adjustments
 	{
 		double[] finnishFreq = new double[256];
 		int counter[] = new int[256];
@@ -87,6 +87,6 @@ public class languages {
 		 
 		Arrays.sort(swedishFreq);
 		return swedishFreq;
-	}
+	}*/
 
 }
